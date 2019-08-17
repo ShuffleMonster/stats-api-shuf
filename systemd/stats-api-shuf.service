@@ -1,0 +1,15 @@
+[Unit]
+Description=stats-api-shuf
+Wants=nginx.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/stats-api-shuf
+ExecStart=/home/ubuntu/stats-api-shuf/run.sh sinatra
+Restart=always
+TimeoutSec=10
+
+[Install]
+WantedBy=multi-user.target
