@@ -60,7 +60,7 @@ source ~/.profile
 
 Check out the stats-api-shuf repo.
 ```
-git clone https://github.com/rockmtn/stats-api-shuf.git
+git clone https://github.com/ShuffleMonster/stats-api-shuf.git
 cd stats-api-shuf # where the GitHub repo has been checked out
 ```
 
