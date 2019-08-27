@@ -79,7 +79,7 @@ class StatsApiThread < Thread
       contractAddress:                    CONTRACT_ADDR,
       decimals:                           dec_units,
       circulatingSupply:                  (s[:circulatingSupply] / dec_units.to_f).to_f,
-      heapTop:                            s[:heapTop].to_s,
+      heapTop:                            "0x%040x" % s[:heapTop].to_i(16), (s[:heapTop] / dec_units.to_f).to_f,
 #      difficulty:                         difficulty,
 #      minimumTarget:                      s[:minimumTarget].to_s,
 #      maximumTarget:                      s[:maximumTarget].to_s,
