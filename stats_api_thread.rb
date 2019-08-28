@@ -44,8 +44,7 @@ class StatsApiThread < Thread
       symbol:             "symbol()",
       decimals:           "decimals()",
       circulatingSupply:  "totalSupply()",
-      heapAddress:        "heapTop(address)",
-      heapMinimum:        "heapTop(unit256)",
+      heapTop:            "heapTop()",
 #      tokensMinted:       "tokensMinted()"
 #      ldps:               "latestDifficultyPeriodStarted()",
 #      miningTarget:       "miningTarget()",
@@ -80,8 +79,8 @@ class StatsApiThread < Thread
       contractAddress:                    CONTRACT_ADDR,
       decimals:                           dec_units,
       circulatingSupply:                  (s[:circulatingSupply] / dec_units.to_f).to_f,
-      heapAddress:                        "0x%040x" % s[:heapAddress].to_i(16),
-      heapMinimum:                        (s[:heapMinimum] / dec_units.to_f).to_f,
+#      difficulty:                         difficulty
+      heapTop:                            "0x%040x" % s[:heapTop].to_i(16).to_s,
 #      difficulty:                         difficulty
 #      minimumTarget:                      s[:minimumTarget].to_s,
 #      maximumTarget:                      s[:maximumTarget].to_s,

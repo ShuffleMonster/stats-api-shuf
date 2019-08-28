@@ -1,0 +1,7 @@
+# port the HTTP server will listen on
+port: 4568
+# HTTP ethereum EVM endpoint (e.g., parity, infura)
+# e.g.: https://mainnet.infura.io/v3/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+provider: https://mainnet.infura.io/v3/f5a8b69e87f74422a53d0993767ef73d
+# how often to ask the EVM (parity, infura, geth) for new stats, in seconds
+every: 10
