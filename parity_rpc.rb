@@ -44,6 +44,7 @@ class ParityRPC
 
   DECODE_STRING = Set[:name, :symbol]
   DECODE_ADDR = Set[:heapTop]
+  DECODE_UNIT = Set[:heapTop]
   NO_DECODE_HEX = Set[:heapTop]
   def decode(data)
     data.collect do |k, v|
