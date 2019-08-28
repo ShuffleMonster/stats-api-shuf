@@ -80,7 +80,7 @@ class StatsApiThread < Thread
       decimals:                           dec_units,
       circulatingSupply:                  (s[:circulatingSupply] / dec_units.to_f).to_f,
 #      difficulty:                         difficulty
-      heapTop:                            "0x%040x" % s[:heapTop].to_i(16).to_s: (s / dec_units.to_f).to_f,
+      heapTop:                            "0x%040x" % s[:heapTop].to_i(16).to_s: / dec_units.to_f,
 #      difficulty:                         difficulty
 #      minimumTarget:                      s[:minimumTarget].to_s,
 #      maximumTarget:                      s[:maximumTarget].to_s,
