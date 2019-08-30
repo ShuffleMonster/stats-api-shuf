@@ -17,5 +17,5 @@ stats_api_thread = StatsApiThread.new(
 get "/stats.json" do
   content_type :json
   response.headers["Access-Control-Allow-Origin"] = "*"
-  JSON.pretty_generate($stats_json)
+  $stats_json
 end
