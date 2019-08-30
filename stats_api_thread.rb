@@ -70,6 +70,8 @@ class StatsApiThread < Thread
 #    spr        = rsr > 0 ? ssr / rsr : 600
 #    hr         = hashrate(s[:miningTarget], spr)
     dec_units  = 10**s[:decimals]
+    heapTopAddress = s[:heapTop][0,42]
+    heapTopAmount = s[:heapTop][42..-1].to_i(16)
 
     stats = {
       apiVersion:                         "5.12",
@@ -80,7 +82,8 @@ class StatsApiThread < Thread
       decimals:                           dec_units,
       circulatingSupply:                  (s[:circulatingSupply] / dec_units.to_f).to_f,
 #      difficulty:                         difficulty
-      heapTop:                            p s[:heapTop].inspect,
+      heapTopAddress:                     heapTopAddress,
+      heapTopAmount:                      heapTopAmount,
 #      difficulty:                         difficulty
 #      minimumTarget:                      s[:minimumTarget].to_s,
 #      maximumTarget:                      s[:maximumTarget].to_s,
