@@ -46,7 +46,7 @@ class StatsApiThread < Thread
       circulatingSupply:  "totalSupply()",
       heapTop:            "heapTop()",
       heapSize:           "heapSize()",
-      heapWinner:         "Winner()",
+      heapWinner:         "Winner(_winner)",
 #      heapWinner2:        "_winner()",
 #      tokensMinted:       "tokensMinted()"
 #      ldps:               "latestDifficultyPeriodStarted()",
