@@ -11,7 +11,7 @@ $stats_json = "{}"
 stats_api_thread = StatsApiThread.new(
   parity:     parity,
   every:      config["every"],
-  on_change:  Proc.new { |stats| $stats_json = stats.to_json }
+  on_change:  Proc.new { |stats| $stats_json = JSON.pretty_generate(stats) }
 )
 
 get "/stats.json" do
