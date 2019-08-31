@@ -73,6 +73,7 @@ class StatsApiThread < Thread
     dec_units  = 10**s[:decimals]
     heapTopAddress = s[:heapTop][0,42]
     heapTopAmount = s[:heapTop][42..-1].to_i(16)
+    initialSupply = 1010101
 
     stats = {
       apiVersion:                         "5.12",
@@ -81,11 +82,13 @@ class StatsApiThread < Thread
       contractUrl:                        "https://etherscan.io/address/#{CONTRACT_ADDR}",
       contractAddress:                    CONTRACT_ADDR,
       decimals:                           dec_units,
+      startingSupply:                     initialSupply,
       circulatingSupply:                  (s[:circulatingSupply] / dec_units.to_f).to_f,
+      tokensBurned:                       1010101 - (s[:circulatingSupply] / dec_units.to_f).to_f,
       heapSize:                           s[:heapSize],
-#      difficulty:                         difficulty
       heapTopAddress:                     heapTopAddress,
       heapTopAmount:                      heapTopAmount,
+      currentEthBlock:                    s[:currentEthBlock]
 #      difficulty:                         difficulty
 #      minimumTarget:                      s[:minimumTarget].to_s,
 #      maximumTarget:                      s[:maximumTarget].to_s,
@@ -95,12 +98,10 @@ class StatsApiThread < Thread
 #      maxSupplyForEra:                    s[:maxSupplyForEra],
 #      blocksPerReadjustment:              s[:bpr],
 #      latestDifficultyPeriodStarted:      s[:ldps],
-      tokensBurned:                       1010101 - (s[:circulatingSupply] / dec_units.to_f).to_f,
 #      circulatingSupply:                  (s[:tokensMinted] / dec_units.to_f).to_i,
 #      lastRewardTo:                       "0x%040x" % s[:lastRewardTo].to_i(16),
 #      lastRewardAmount:                   (s[:lastRewardAmount] / dec_units.to_f).to_f,
 #      lastRewardEthBlockNumber:           s[:lrebn],
-      currentEthBlock:                    s[:currentEthBlock]
 #      ethBlocksSinceLastDifficultyPeriod: ebsldp,
 #      secondsPerWinner:                   spw
 #      hashrateEstimate:                   hr,
