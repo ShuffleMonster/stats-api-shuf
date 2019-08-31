@@ -46,7 +46,7 @@ class StatsApiThread < Thread
       circulatingSupply:  "totalSupply()",
       heapTop:            "heapTop()",
       heapSize:           "heapSize()",
-      heapWinner:         "Winner()",
+#      heapWinner:         "Winner()",
 #      heapWinner2:        "_winner()",
 #      tokensMinted:       "tokensMinted()"
 #      ldps:               "latestDifficultyPeriodStarted()",
@@ -100,7 +100,7 @@ class StatsApiThread < Thread
 #      winnerAmount:                       winnerAmount,
 #      winnerAddress2:                     winnerAddress2,
 #      winnerAmount2:                      winnerAmount2,
-      heapWinner:                         s[:heapWinner].to_s,
+#      heapWinner:                         s[:heapWinner].to_s,
       currentEthBlock:                    s[:currentEthBlock]
 #      difficulty:                         difficulty
 #      minimumTarget:                      s[:minimumTarget].to_s,
