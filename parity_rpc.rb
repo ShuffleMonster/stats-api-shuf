@@ -42,10 +42,9 @@ class ParityRPC
     end.compact.to_h)
   end
 
-  DECODE_STRING = Set[:name, :symbol]
-  DECODE_ADDR = Set[:heapTop]
-  DECODE_UNIT = Set[:heapTop]
-  NO_DECODE_HEX = Set[:heapTop]
+DECODE_STRING = Set[:name, :symbol]
+DECODE_ADDR = Set[:heapTop]
+NO_DECODE_HEX = Set[:challengeNumber]
   def decode(data)
     data.collect do |k, v|
       if v.is_a?(String)
