@@ -90,7 +90,7 @@ class StatsApiThread < Thread
       heapSize:                           s[:heapSize],
       heapTopAddress:                     heapTopAddress,
       heapTopAmount:                      heapTopAmount,
-      heapTopAmountReadable:              heapTopAmount / dec_units.to_f,
+      heapTopAmountReadable:              heapTopAmount / dec_units.to_f(3),
 #      latestWinner:                       latestWinner,
       currentEthBlock:                    s[:currentEthBlock]
 #      difficulty:                         difficulty
