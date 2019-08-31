@@ -90,7 +90,7 @@ class StatsApiThread < Thread
       heapTopAddress:                     heapTopAddress,
       heapTopAmount:                      heapTopAmount,
       heapTopAmountReadable:              heapTopAmount / dec_units.to_f,
-      heapWinner:                         p s[:heapWinner].inspect,
+      heapWinner:                         s[:heapWinner],
       currentEthBlock:                    s[:currentEthBlock]
 #      difficulty:                         difficulty
 #      minimumTarget:                      s[:minimumTarget].to_s,
