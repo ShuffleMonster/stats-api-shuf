@@ -84,7 +84,7 @@ class StatsApiThread < Thread
       decimals:                           dec_units,
       startingSupply:                     initialSupply,
       circulatingSupply:                  (s[:circulatingSupply] / dec_units.to_f).to_f,
-      tokensBurned:                       1010101 - (s[:circulatingSupply] / dec_units.to_f).to_f,
+      tokensBurned:                       initialSupply - (s[:circulatingSupply] / dec_units.to_f).to_f,
       heapSize:                           s[:heapSize],
       heapTopAddress:                     heapTopAddress,
       heapTopAmount:                      heapTopAmount,
