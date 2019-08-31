@@ -100,7 +100,7 @@ class StatsApiThread < Thread
 #      winnerAmount:                       winnerAmount,
 #      winnerAddress2:                     winnerAddress2,
 #      winnerAmount2:                      winnerAmount2,
-      heapWinner:                         s[:heapWinner][0,42],
+      heapWinner:                         s[:heapWinner].to_s,
       currentEthBlock:                    s[:currentEthBlock]
 #      difficulty:                         difficulty
 #      minimumTarget:                      s[:minimumTarget].to_s,
