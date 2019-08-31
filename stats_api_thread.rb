@@ -46,6 +46,7 @@ class StatsApiThread < Thread
       circulatingSupply:  "totalSupply()",
       heapTop:            "heapTop()",
       heapSize:           "heapSize()",
+      heapWinner:         "Winner()",
 #      tokensMinted:       "tokensMinted()"
 #      ldps:               "latestDifficultyPeriodStarted()",
 #      miningTarget:       "miningTarget()",
@@ -89,6 +90,7 @@ class StatsApiThread < Thread
       heapTopAddress:                     heapTopAddress,
       heapTopAmount:                      heapTopAmount,
       heapTopAmountReadable:              heapTopAmount / dec_units.to_f,
+      heapWinner:                         p s[:heapWinner].inspect,
       currentEthBlock:                    s[:currentEthBlock]
 #      difficulty:                         difficulty
 #      minimumTarget:                      s[:minimumTarget].to_s,
